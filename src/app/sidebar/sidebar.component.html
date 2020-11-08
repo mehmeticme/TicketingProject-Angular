@@ -1,0 +1,59 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="../../assets/img/idea.png" alt="Project Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Ticketing Project</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../../assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Mehmet Icme</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+
+
+               <li [ngClass]="{'has-treeview': menuItem.children, 'menu-open': openedMenu === i}" class="nav-item"  *ngFor="let menuItem of menu; let i=index" [attr.data-index]="i" (click)="onMenuItemClick(i,$event)" >
+                 <a class="nav-link">
+                   <span class="fas fa-user-nurse"></span>
+                   <!-- <i class="{{menuItem.icon}}"></i> -->
+                   {{menuItem.title}}
+                 </a>
+
+                 <ul class="nav nav-treeview menu-open" *ngIf="openedMenu===i">
+                   <li class="nav-item"  *ngFor="let childItem of menuItem.children">
+                     <i class="{{menuItem.icon}}"></i>
+                     <a  class="nav-link" (click)="onChildMenuItemClick(childItem.route)" >{{childItem.title}}</a>
+                   </li>
+                 </ul>
+               </li>
+         
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

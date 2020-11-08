@@ -24,6 +24,9 @@
               "src/assets"
             ],
             "styles": [
+              "../node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/bootstrap/dist/js/bootstrap.js",
               "src/styles.css"
             ],
             "scripts": []
@@ -89,6 +92,7 @@
             ],
             "styles": [
               "src/styles.css"
+           
             ],
             "scripts": []
           }
@@ -119,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Angular-TicketingProject"
+    }
+  },
+  "defaultProject": "Angular-TicketingProject",
+  "cli": {
+    "analytics": "552da76d-39d6-49ed-b8b9-79365eb20014"
+  }
 }
