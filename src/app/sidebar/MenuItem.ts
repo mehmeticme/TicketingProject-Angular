@@ -15,16 +15,16 @@ export class MenuConstants{
 
    public static readonly ADMINISTRATION_CONSTANTS: MenuItem = {
     title:'Administration',
-    icon: 'fas fa-user-nurse',
+    icon: 'fa fa-cogs',
     children: [
-        {title: 'User Create', route:'/WelcomePage'},
+        {title: 'User Create', route:'/AdminUserCreate'},
         {title: 'Project Create', route:''}
     ]
     }
 
     public static readonly MANAGER_CONSTANTS: MenuItem = {
         title:'Manager',
-        icon: 'fa-address-book',
+        icon: 'fa fa-users',
         children: [
             {title: 'Assign Task', route:''},
             {title: 'Project Status', route:''}
@@ -34,7 +34,7 @@ export class MenuConstants{
 
     public static readonly EMPLOYEE_CONSTANTS: MenuItem = {
         title:'Employee',
-        icon: 'fa-address-book',
+        icon: 'fa fa-briefcase',
         children: [
             {title: 'Pending Tasks', route:''},
             {title: 'Archive', route:''}

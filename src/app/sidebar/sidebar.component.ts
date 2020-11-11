@@ -11,6 +11,7 @@ export class SidebarComponent implements OnInit {
 
   navlinkClicked=false;
   openedMenu=Number;
+  selectedMenuItem=Number;
   
   constructor(private router: Router) { }
 
@@ -20,17 +21,25 @@ export class SidebarComponent implements OnInit {
     this.navlinkClicked= !this.navlinkClicked;
   }
 
-  onChildMenuItemClick(route){
+  onChildMenuItemClick(route,index){
     this.router.navigate([route]);
+    this.selectedMenuItem=index
+    
+    
   }
 
   onMenuItemClick(index,route){
-    if(this.menu[index].route){
-      this.openedMenu = index;
+    // if(this.menu[index].route){
+    //   this.openedMenu = index;
 
-    }
+    // }
   if(this.openedMenu===index) this.openedMenu=null;
-  else this.openedMenu=index;
+  else {
+    this.openedMenu=index;
+    this.selectedMenuItem=null;
+  
+  }
+
   }
 
   menu:Array<MenuItem>=[

@@ -23,7 +23,7 @@
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
             <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
+              <i class="fa fa-search"></i>
             </button>
           </div>
         </div>
@@ -36,17 +36,24 @@
                with font-awesome or any other icon font library -->
 
 
-               <li [ngClass]="{'has-treeview': menuItem.children, 'menu-open': openedMenu === i}" class="nav-item"  *ngFor="let menuItem of menu; let i=index" [attr.data-index]="i" (click)="onMenuItemClick(i,$event)" >
-                 <a class="nav-link">
-                   <span class="fas fa-user-nurse"></span>
-                   <!-- <i class="{{menuItem.icon}}"></i> -->
+               <li [ngClass]="{'has-treeview': menuItem.children, 'menu-open': openedMenu === i}" class="nav-item"  *ngFor="let menuItem of menu; let i=index" [attr.data-index]="i" >
+                 <a class="nav-link" [ngClass]="{'active': openedMenu === i}"  (click)="onMenuItemClick(i,$event)" >
+                   <i class="{{menuItem.icon}}"></i>
                    {{menuItem.title}}
+                   <p>
+                    <i class="fa fa-angle-down"></i>
+                   </p> 
+                     
+                  
                  </a>
 
                  <ul class="nav nav-treeview menu-open" *ngIf="openedMenu===i">
-                   <li class="nav-item"  *ngFor="let childItem of menuItem.children">
-                     <i class="{{menuItem.icon}}"></i>
-                     <a  class="nav-link" (click)="onChildMenuItemClick(childItem.route)" >{{childItem.title}}</a>
+                   <li class="nav-item"  *ngFor="let childItem of menuItem.children; index as j"  (click)="onChildMenuItemClick(childItem.route,j)" >
+                    
+                     <a  class="nav-link" [class.active]="selectedMenuItem === j" >
+                      <i class="fa fa-circle-o"></i>
+                      <p>{{childItem.title}}</p>
+                     </a>
                    </li>
                  </ul>
                </li>
