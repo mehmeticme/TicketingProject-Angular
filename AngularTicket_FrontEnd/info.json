@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "firstName": "Mehmet",
+      "lastName": "Icme",
+      "userName": "mehmeticme42@gmail.com",
+      "mobileNumber": null,
+      "password": "asdasd21",
+      "passwordConfirm": "asdasdqa12",
+      "gender": "Male",
+      "role": "Manager",
+      "id": 1
+    },
+    {
+      "firstName": "Mike",
+      "lastName": "Smith",
+      "userName": "m.smith@gmail.com",
+      "mobileNumber": "1112223345",
+      "password": "",
+      "passwordConfirm": "",
+      "gender": "Male",
+      "role": "Employee",
+      "id": 3
+    }
+  ],
+
+  "roles":[
+    {
+      "id" :1,
+      "role" : "Admin"
+    },
+    {
+      "id" :2,
+      "role" : "Employee"
+    },
+    {
+      "id" :3,
+      "role" : "Manager"
+    }
+  ]
+}

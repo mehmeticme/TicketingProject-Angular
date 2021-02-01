@@ -18,7 +18,7 @@ export class MenuConstants{
     icon: 'fa fa-cogs',
     children: [
         {title: 'User Create', route:'/AdminUserCreate'},
-        {title: 'Project Create', route:''}
+        {title: 'Project Create', route:'/ProjectCreate'}
     ]
     }
 
