@@ -1,0 +1,13 @@
+.fade.show{
+    opacity: 2px;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content{
+    width: max-content;
+}
+
+h6{
+    padding-top: 3px;
+}
+
